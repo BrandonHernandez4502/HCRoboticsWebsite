@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holy Cross Robotics Club</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bs-primary: #602D89; /* Deep purple (Holy Cross inspired) */
+    }
+    .bg-primary, .btn-primary {
+      background-color: var(--bs-primary) !important;
+      border-color: var(--bs-primary) !important;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">HC Robotics Club</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-5 text-white text-center bg-primary">
+    <div class="container">
+      <h1 class="display-4">Welcome to the Robotics Club</h1>
+      <p class="lead">Innovating, Building, and Learning at the College of the Holy Cross</p>
+      <a href="#projects" class="btn btn-light mt-3">See Our Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">About Us</h2>
+      <p>
+        The Holy Cross Robotics Club is a student-led organization passionate about engineering, coding, and teamwork. We design and build robots, teach STEM skills, and engage in exciting challenges that bring theory into action.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">Our Robots</h2>
+      <img src = "images/XArm1S.jpeg" style="float: left; margin: 5px;">
+      <p style="margin-right: 10px;"> 
+        In Fall 2024, the Robotics Club acquired the XArm 1S, a 6-degree-of-freedom robotic arm designed for precision and flexibility. Delivered as a kit, we assembled the robot from its individual components, gaining a deeper understanding of its mechanical and electronic systems.
+        We chose to program the XArm using Python for its versatility and strong support within the robotics community. Currently, we are in the process of building a custom ROS 2 (Robot Operating System 2) environment, which will allow us to develop and test complex robotic behaviors with greater control and modularity.
+        Our original project goal was to equip the XArm with a camera system and implement computer vision to play the shell game—a classic challenge that tests the robot’s ability to track and manipulate objects using visual feedback. The project combines mechanical design, programming, and AI vision, making it an exciting and ongoing interdisciplinary effort.
+        We are still implementing this feature and would love for new members to help us along the way.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Get in Touch</h2>
+      <p>Email us at <a href="mailto: bbmcca26@g.holycross.edu">bbmcca26@g.holycross.edu </a> or visit our weekly meetings in the Science Building, Room 210, Fridays at 4PM.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <small>© 2025 Holy Cross Robotics Club. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
