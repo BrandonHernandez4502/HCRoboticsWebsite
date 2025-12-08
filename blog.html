@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts - Holy Cross Robotics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6B46C1 0%, #553C9A 100%);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links .about-btn {
+            background: black;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Page Title Section */
+        .page-header {
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .page-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Blog Post */
+        .blog-post {
+            margin-bottom: 4rem;
+        }
+
+        .blog-post h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+
+        .blog-post p {
+            margin-bottom: 1.25rem;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .blog-post ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-post li {
+            margin-bottom: 0.5rem;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .blog-post strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        /* Divider */
+        .divider {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 3rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #f8f8f8;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #6B46C1;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #6B46C1;
+            border-color: #6B46C1;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-post h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .container {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Holy Cross Robotics</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html" class="about-btn">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Blog Posts</h1>
+            <p class="page-subtitle">This our Blog were we post significant project updates.</p>
+        </div>
+
+        <article class="blog-post">
+            <h2>Welcoming New Members & Growing Our Skills</h2>
+            <p>
+                We've used our funds, off this semester, with several new exercies joining the robotics club. Theres to be added, from a new addition 
+                to how many existing, certainly, and assembling here in this more important project.
+            </p>
+            <p>
+                To help everyone get up to speed—and to build a strong foundation for earlier ahead—we've structure meeting weekly tutorials focused 
+                on these essential elements. So far, our sessions have interest.
+            </p>
+            <ul>
+                <li><strong>Robotics fundamentals</strong></li>
+                <li><strong>Programming skills,</strong> including object detection and real-time tracking</li>
+                <li><strong>Hardware integration</strong> and connecting motors and sensors to achieve coordinated</li>
+            </ul>
+            <p>
+                These workshops ensure that every member, new or returning, develops the skills needed to contribute meaningfully to our upcoming 
+                projects. We've already seeing great engagement and enthusiasm, and we've excited to see what this improved, better-trained team can 
+                accomplish together!
+            </p>
+        </article>
+
+        <hr class="divider">
+
+        <article class="blog-post">
+            <h2>Introducing Our New Robot — The uFactory xArm6</h2>
+            <p>
+                Hope news for our team: we've officially added the uFactory xArm6 to our robotics house! This 6-axis collaborative robotic arm is a 
+                powerful, precise, and versatile tool that will enable us to pursue more advanced and impactful projects.
+            </p>
+            <p>
+                The xArm6 is designed for precision tasks and seamlessly integrates with popular programming environments. It opens the door to a 
+                robotics arm's impressive range of tasks—from pick-and-place operations to advanced motion planning experiments. Its high-level flexibility 
+                especially allows any expert who's used to be integrated with Python, ROS, custom vision systems, and custom tooling.
+            </p>
+            <p>
+                Whether we're experimenting with automation, training newcomers on industrial workflows, or pushing the limits of what we can 
+                emulate using robotics algorithms, the xArm6 with provide a powerful foundation for discovery and innovation. We're also planning a 
+                series of hands-on sessions to help team members get comfortable with the robot's capabilities, programming interfaces, and 
+                becoming new start-scales robot like vision.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Holy Cross Robotics</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

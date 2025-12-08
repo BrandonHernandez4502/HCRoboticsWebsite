@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Cross Robotics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6B46C1 0%, #553C9A 100%);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links .about-btn {
+            background: black;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            background: black;
+            color: white;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #333;
+        }
+
+        /* Robots Section */
+        .robots-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .robots-section h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+        }
+
+        .robots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .robot-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .robot-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .robot-image {
+            width: 100%;
+            height: 250px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .robot-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } 
+
+        .robot-content {
+            padding: 1.5rem;
+        }
+
+        .robot-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: #1a1a1a;
+        }
+
+        .robot-content p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #f8f8f8;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #6B46C1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .robots-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Holy Cross Robotics</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html" class="about-btn">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Innovations in Robotics</h1>
+            <p class="hero-text">
+                The Holy Cross Robotics Club was founded to give STEM students an 
+                opportunity to showcase their creativity & skill. Since 2021 we have led 
+                several award winning projects, powered by AI and robotics.
+            </p>
+            <button class="cta-button">See Our Projects</button>
+        </section>
+
+        <section class="robots-section">
+            <h2>Our Robots</h2>
+            <div class="robots-grid">
+                <div class="robot-card">
+                    <div class="robot-image">
+                        <img src="images/xarm2s.jpeg">
+                    </div>
+                    <div class="robot-content">
+                        <h3>Xam is PERFECT</h3>
+                        <p>
+                            The robot has started to eat donuts and cake. Created by the 
+                            Holy Cross Robotics Team, this bot has been used for several 
+                            different proj...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="robot-card">
+                    <div class="robot-image">
+                        <img src="images/ufactory.jpeg">
+                    </div>
+                    <div class="robot-content">
+                        <h3>Grubby Xam 8</h3>
+                        <p>
+                            Our newest robot created by Xam, the creator of the robot. 
+                            The robot will eat you if you have food. We have great ideas for the future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Holy Cross Robotics</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
